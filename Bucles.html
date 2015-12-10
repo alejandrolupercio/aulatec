@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form</title>
+      <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+  </head>
+    <body>
+<div id="container">
+  <div class=row>
+    <div class="col-sm-6">
+  <button id='boton' class="btn btn-primary">Ver Formulario</button>
+  <div id="formulario">
+    <form action="//formspree.io/alejandroredhotchilipeppers@gmail.com" method="POST">
+      <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" name="nombre" class="form-control"
+        placeholder="Ingresa tu nombre">
+      </div>
+
+      <div class="form-group">
+        <label>Apellido</label>
+        <input type="text" name="apellido" class="form-control"
+        placeholder="Ingresa tu apellido">
+      </div>
+      <input type='submit'>
+        
+      <div class="form-group">
+          <label>Email</label>
+          <input type="color" name="color" class='form-control">
+        </div>
+                                                  
+    </form>
+    </div>
+    </div>
+  </div>
+</div>
+    <script>
+$('#formulario').hide();
+$( document.body ).click(function () {
+  if ( $( "#formulario" ).is( ":hidden" ) ) {
+    $( "#formulario" ).slideDown( "slow" );
+  } else {
+    $( "#formulario" ).hide();
+  }
+});
+    </script>
+  </body>
+</html>
