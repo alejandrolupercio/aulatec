@@ -5,78 +5,137 @@
         <title>Curriculum</title>
         
         <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <div Class="container"/>
-        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         
        <style>
+       // Classes
+.show {
+  display: block !important;
+}
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+.invisible {
+  visibility: hidden;
+}
+*{
+font-family: "Times New Roman";
+font-weight: bold;
+}
+       /*
 div.cities {
-    background-color:black;
-    color:white;
+    background-color:gray;
+    color:black;
     margin:20px;
     padding:20px;
 }
+*/
+
+.btn-mycolor{
+  background-color:gray!important;
+  border-color:gray!important;
+  
+  
+}
+body {
+    background-image: url("http://netupd8.com/walls/Surface_I_Wallpaper_by_sword1ne.resized.png");
+    background-color: #cccccc;
+}
+
 </style>
         
     </head>
-    
+    <div class="container">
     
     
     <body>
         
         <div class="cities">
-<h3>Hello</h3>
-            <h4>My name is Alejandro,</h4><p> I am Developer web </p>
+                     <font color="white"> <H1>Alejandro Lupercio Avila  </H1></font>
+              <hr>
 </div>
     
       
     
-        <h2>Data</h2>
+        <font color="white"><h2>Data</h2></font>
         
-        <p>My name is Alejandro Lupercio Avila</p>
+      
 
-        <p> My email is alejandroredhotchilipeppers@gmail.com
-            
+<div class="btn-group">
+  <button id="boton_contacto" type="button" class="btn btn-info btn-mycolor">Cotacto</button>
+  <button id="boton_tabla" type="button" class="btn btn-info btn-mycolor">Estudios</button>
+  <button id="boton_derecho" type="button" class="btn btn-info btn-mycolor">Infromacion</button>
+</div>
+<br>
+<div id="informacion" class="well">
+<div> <p>Web Developer</p>
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JS</li>
+  <li>Jquery</li>
+</ul>
+<p> English level 60%</p>
+</div>
+</div>
+<div id="contacto" class="well">
+      <div>
+            <p>alejandroredhot@outlook.com</p>
             <p>Phone 449-244-21-06</p>
-        
-        <h4>My mission is to get closer to your customers, friends</h4>
-        
-        <p>In an organized and interactive way</p>
-        
-        
-        <div id='myDiv'>
-         <h1> Web Design </h1>
-    </div>
-<button id="boton_tabla" type="button" class="btn btn-info">Estudios</button>
-        
-    <table id="estudios" class="table table-stripped">
+      </div>
+</div>
+      
+      
+<div id="tabla_educacion" class="well">
+    <table class="table table-stripped">
         <thead>
-            <th>College/Inst.</th>
+           <th>College/Inst.</th>
             <th>Mayor</th>
             <th>Years</th>
         </thead>
-        <tbody>
+        </tbody>
             <tr>
                 <td>Bachilleres de Aguascalientes</td>
                 <td>Preparatoria</td>
                 <td>2013-2015</td>
-                
+                <td></td>
             </tr>
         </tbody>
-       </table>
+    </table>
+ </div>
+    
      </div>
-          <script>
-            
-        $("#estudios").hide()
-        $('#boton_tabla').click(function(){
-   $('#button').slidedown("slow",function()) {
-        }
-               )
-            
-            
-            
-            </script>
-            
+<script>
+//estas dos lineas ocultan la tabla y el div de contacto
+  $("#tabla_educacion").addClass('hidden');//anade clase hidden para ocultar
+  $("#contacto").addClass('hidden');
+  $("#informacion").addClass('hidden');
+ 
+ 
+  
+  $( "#boton_derecho" ).click(function () {
+    $( "#informacion" ).removeClass('hidden');
+    $("#contacto").addClass('hidden');
+    $("#tabla_educacion").addClass('hidden');
+    
+});
+  
+  
+  $( "#boton_tabla" ).click(function () {
+    $( "#tabla_educacion" ).removeClass('hidden');
+    $("#contacto").addClass('hidden');
+    $("#informacion").addClass('hidden');
+});
+
+  $( "#boton_contacto" ).click(function () {
+    $( "#contacto" ).removeClass('hidden');
+    $("#tabla_educacion").addClass('hidden');
+    $("#informacion").addClass('hidden');
+    
+});
+
+</script>
             
     </body>
       
@@ -86,3 +145,4 @@ div.cities {
     
 </html>
     
+
