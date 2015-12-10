@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+<script>
+var person = {
+  name: 'Alejandro',
+  location: 'Aguascalientes',
+  age: 19,
+  hobbies: ['working', 'partying'],
+  cat: {
+    name: "Marshall",
+    hobbies: [ "sleep in my bed", "eat mi chicken" ]
+  },
+  party: function(){
+    console.log('drink, dance, sleep!')
+  }
+}
+person.name
+person.age
+
+person.hobbies[0]
+person.cat.name
+
+person.party // what does this do?
+person.party() // how about this?
+
+
+person.work = function(){
+  console.log("Welcome to McDonald's, I'm " + this.name + ". May I take your order?")
+  console.log("Enjoy this beautiful day in " + this.location)
+  console.log("Would you like to hear a story about " + this.cat.name + " and his " + this.cat.hobbies[1])
+}
+person.work()
+</script>
+
+
+
+
+</html>
